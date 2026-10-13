@@ -1,7 +1,7 @@
 # ROS2 AMR Navigation
 
 ROS2 Humble 기반의 차동구동 AMR Navigation 프로젝트입니다.  
-Gazebo 시뮬레이션 환경에서 기존 ICP/EKF Localization을 사용하고, **Dijkstra와 A\***를 직접 구현하여 **Nav2 Global Planner Plugin**으로 통합한 뒤 동일 조건에서 성능을 비교했습니다.
+Gazebo 시뮬레이션 환경에서 기존 ICP/EKF Localization을 사용하고, **A*와 Dijkstra**를 직접 구현하여 **Nav2 Global Planner Plugin**으로 통합한 뒤 동일 조건에서 성능을 비교했습니다.
 
 > **Repository name:** `ros2_amr_navigation`
 
