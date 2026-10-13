@@ -1,0 +1,50 @@
+# Gazebo Fortress <-> ROS2 bridge.
+# Topic names intentionally match the existing localization project so the
+# original ICP/EKF code can be reused without modification.
+- ros_topic_name: "/cmd_vel"
+  gz_topic_name: "/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "ignition.msgs.Twist"
+  direction: ROS_TO_IGN
+
+- ros_topic_name: "/odom"
+  gz_topic_name: "/model/icp_ekf_amr/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "ignition.msgs.Odometry"
+  direction: IGN_TO_ROS
+
+- ros_topic_name: "/scan"
+  gz_topic_name: "/scan"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  gz_type_name: "ignition.msgs.LaserScan"
+  direction: IGN_TO_ROS
+
+- ros_topic_name: "/joint_states"
+  gz_topic_name: "/model/icp_ekf_amr/joint_state"
+  ros_type_name: "sensor_msgs/msg/JointState"
+  gz_type_name: "ignition.msgs.Model"
+  direction: IGN_TO_ROS
+
+- ros_topic_name: "/imu"
+  gz_topic_name: "/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "ignition.msgs.IMU"
+  direction: IGN_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/model/icp_ekf_amr/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "ignition.msgs.Pose_V"
+  direction: IGN_TO_ROS
+
+- ros_topic_name: "/clock"
+  gz_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "ignition.msgs.Clock"
+  direction: IGN_TO_ROS
+
+- ros_topic_name: "/ground_truth/poses"
+  gz_topic_name: "/world/maze_world/dynamic_pose/info"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "ignition.msgs.Pose_V"
+  direction: IGN_TO_ROS

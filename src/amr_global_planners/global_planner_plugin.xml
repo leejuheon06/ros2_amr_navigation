@@ -1,0 +1,15 @@
+<library path="amr_global_planners_plugin">
+  <class
+    name="amr_global_planners::AStarPlanner"
+    type="amr_global_planners::AStarPlanner"
+    base_class_type="nav2_core::GlobalPlanner">
+    <description>Custom 8-connected A* planner for the AMR benchmark.</description>
+  </class>
+
+  <class
+    name="amr_global_planners::DijkstraPlanner"
+    type="amr_global_planners::DijkstraPlanner"
+    base_class_type="nav2_core::GlobalPlanner">
+    <description>Custom 8-connected Dijkstra planner for the AMR benchmark.</description>
+  </class>
+</library>

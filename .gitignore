@@ -1,0 +1,12 @@
+build/
+install/
+log/
+.vscode/
+__pycache__/
+*.pyc
+
+# Localization packages are maintained in the prerequisite repository and
+# imported locally with tools/import_existing_localization.sh.
+src/robot_description/
+src/icp_localization/
+src/ekf_localization/
